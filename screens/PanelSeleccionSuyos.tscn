@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2w777ldtbg4s"]
+[gd_scene load_steps=4 format=3 uid="uid://b2w777ldtbg4s"]
 
 [ext_resource type="PackedScene" uid="uid://cbab33barl8wq" path="res://screens/UI/Cards/SuyoCard.tscn" id="1_l344g"]
+[ext_resource type="Script" uid="uid://bxe4lmrd8peh3" path="res://screens/PanelSeleccionSuyos.gd" id="1_msf4k"]
 [ext_resource type="Texture2D" uid="uid://bf08ybja2npv4" path="res://resources/FakeImagePlayer.png" id="2_d07xl"]
 
 [node name="PanelSelection" type="Control"]
@@ -10,6 +11,7 @@ anchor_bottom = 1.0
 offset_right = 0.447876
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_msf4k")
 
 [node name="ContenedorTarjetas" type="GridContainer" parent="."]
 layout_mode = 1
