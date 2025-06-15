@@ -5,17 +5,22 @@ extends Control
 @export var suyo_imagen_personaje: Texture2D # Para cargar la imagen desde el Inspector
 @export var esta_bloqueado: bool = false # Para saber si el suyo está bloqueado
 
-@onready var lbl_titulo_suyo = %LblTituloSuyo
-@onready var lbl_descripcion = %LblDescripcion
-@onready var img_personaje = %ImgPersonaje
-@onready var btn_jugar = %BtnJugar
-@onready var img_candado = %ImgCandado
+# Primero, obtenemos la referencia al nodo FondoTarjeta
+@onready var fondo_tarjeta: Control = $FondoTarjeta # Asegúrate que $FondoTarjeta sea correcto (si es hijo directo)
+												   # O usa %FondoTarjeta si le activaste "Nombre Único"
 
-# boton jugar precionado
+# Ahora, podemos usar 'fondo_tarjeta' para obtener sus hijos
+@onready var lbl_titulo_suyo: Label = fondo_tarjeta.get_node("LblTituloSuyo")
+@onready var lbl_descripcion: Label = fondo_tarjeta.get_node("LblDescripcion")
+@onready var img_personaje: TextureRect = fondo_tarjeta.get_node("ImgPersonaje")
+@onready var btn_jugar: Button = fondo_tarjeta.get_node("BtnJugar")
+@onready var img_candado: TextureRect = fondo_tarjeta.get_node("ImgCandado")
+
+# Señal que emitirá esta tarjeta cuando se presione el botón Jugar
 signal suyo_seleccionado(suyo_nombre: String)
 
 func _ready():
-	# valores de variables
+	# Asigna los valores de las variables exportadas a los elementos de la UI
 	lbl_titulo_suyo.text = suyo_nombre
 	lbl_descripcion.text = suyo_descripcion
 	if suyo_imagen_personaje:

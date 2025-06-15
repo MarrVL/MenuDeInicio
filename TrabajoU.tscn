@@ -1,13 +1,13 @@
 [gd_scene load_steps=19 format=3 uid="uid://bcr11xakjy16x"]
 
 [ext_resource type="Script" uid="uid://c3lfoke0lv8ja" path="res://trabajo.gd" id="1_ls076"]
-[ext_resource type="Texture2D" uid="uid://dnlmsl4rdsluf" path="res://fondoPixel.png" id="2_crsm4"]
-[ext_resource type="FontFile" uid="uid://b20aymdech4mf" path="res://Crang.ttf" id="3_qvlff"]
+[ext_resource type="Texture2D" uid="uid://bt2vmrebrfuu8" path="res://fondoPixel.png" id="2_crsm4"]
+[ext_resource type="FontFile" uid="uid://th8eh07oo8mg" path="res://Crang.ttf" id="3_qvlff"]
 [ext_resource type="AudioStream" uid="uid://cuasx2ll4dt3c" path="res://Undertale - Megalovania.mp3" id="4_140n1"]
 [ext_resource type="Texture2D" uid="uid://v5n07u7d1nre" path="res://nombre del juego.png" id="5_ovc0h"]
-[ext_resource type="Texture2D" uid="uid://c8i7oe346lem6" path="res://tira.png" id="6_wadr7"]
+[ext_resource type="Texture2D" uid="uid://mtef0f5pjc6n" path="res://tira.png" id="6_wadr7"]
 [ext_resource type="Script" uid="uid://djevk68i5ys5s" path="res://volumen_slider.gd" id="7_ty3vb"]
-[ext_resource type="FontFile" uid="uid://btigat11r1b2x" path="res://Pixelcraft - Personal Use.ttf" id="8_2qri3"]
+[ext_resource type="FontFile" uid="uid://btigat11r1b2x" path="res://resources/Fonts/Pixelcraft - Personal Use.ttf" id="8_2qri3"]
 [ext_resource type="Script" uid="uid://dafjw5qxgwcdf" path="res://pantalla_tamaño.gd" id="9_yxj12"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m6wq2"]
@@ -61,9 +61,10 @@ thickness = 8
 
 [node name="Control" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 1.111
+anchor_bottom = 1.111
+offset_right = 0.12793
+offset_bottom = 0.0719604
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ls076")
@@ -141,12 +142,12 @@ scale = Vector2(0.263733, 0.263733)
 texture = ExtResource("5_ovc0h")
 
 [node name="Tira" type="Sprite2D" parent="."]
-position = Vector2(594, 572)
+position = Vector2(641, 593)
 scale = Vector2(0.322697, 0.242108)
 texture = ExtResource("6_wadr7")
 
 [node name="Tira2" type="Sprite2D" parent="."]
-position = Vector2(599, 70)
+position = Vector2(632, 72)
 scale = Vector2(0.334568, 0.25073)
 texture = ExtResource("6_wadr7")
 

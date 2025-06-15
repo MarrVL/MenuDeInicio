@@ -10,8 +10,9 @@ func _ready():
 	contenedor_botones.visible = true
 	panel_opciones.visible = false
 	
-func _on_Empezar_prossed():
-	get_tree().change_scene_to_file("res://trabajo.tscn")
+func _on_Empezar_pressed():
+	get_tree().change_scene_to_file("res://screens/PanelSeleccionSuyos.tscn")
+	#get_tree().change_scene_to_file("res://trabajo.tscn")
 	
 func _on_opciones_pressed() -> void:
 	print("Settings pressed")
