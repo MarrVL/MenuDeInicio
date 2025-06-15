@@ -1,42 +1,37 @@
-[gd_scene load_steps=9 format=3 uid="uid://b2w777ldtbg4s"]
+[gd_scene load_steps=8 format=3 uid="uid://b2w777ldtbg4s"]
 
 [ext_resource type="PackedScene" uid="uid://cbab33barl8wq" path="res://screens/UI/Cards/SuyoCard.tscn" id="1_l344g"]
 [ext_resource type="Script" uid="uid://bxe4lmrd8peh3" path="res://screens/PanelSeleccionSuyos.gd" id="1_msf4k"]
-[ext_resource type="Texture2D" uid="uid://srlpk7ygpgdc" path="res://resources/Img/fondoPixel.png" id="2_l0dh7"]
+[ext_resource type="Texture2D" uid="uid://bf08ybja2npv4" path="res://resources/FakeImagePlayer.png" id="2_d07xl"]
+[ext_resource type="Texture2D" uid="uid://srlpk7ygpgdc" path="res://resources/fondoPixel.png" id="2_l0dh7"]
 [ext_resource type="FontFile" uid="uid://btigat11r1b2x" path="res://resources/Fonts/Pixelcraft - Personal Use.ttf" id="3_vq8rg"]
-[ext_resource type="Texture2D" uid="uid://dyacjadwmg0xa" path="res://resources/Img/flechaIzquierda.png" id="6_ghr1j"]
-[ext_resource type="Texture2D" uid="uid://b01s2i3o7n84w" path="res://resources/Img/flechaDerecha.png" id="7_d5wye"]
-[ext_resource type="Texture2D" uid="uid://c5ks00rhe0ond" path="res://resources/Img/BtnJugarPxl2.png" id="7_vq8rg"]
-[ext_resource type="Texture2D" uid="uid://cimrmafetbrws" path="res://resources/Img/BtnBack.png" id="8_ghr1j"]
+[ext_resource type="Texture2D" uid="uid://dyacjadwmg0xa" path="res://resources/ImgComponents/flechaIzquierda.png" id="6_ghr1j"]
+[ext_resource type="Texture2D" uid="uid://b01s2i3o7n84w" path="res://resources/ImgComponents/flechaDerecha.png" id="7_d5wye"]
 
 [node name="PanelSeleccionSuyos" type="Control"]
 layout_mode = 3
-anchor_right = 1.002
-anchor_bottom = 1.006
-offset_right = -0.304077
-offset_bottom = 0.112
+anchor_right = 1.076
+anchor_bottom = 1.0
+offset_right = 40.448
+offset_bottom = 72.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_msf4k")
 
 [node name="FondoPrincipalUI" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1.0
-offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="FondoPantallaTextura" type="TextureRect" parent="FondoPrincipalUI"]
 z_index = -1
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.995
-anchor_bottom = 0.997
-offset_right = -0.225098
-offset_bottom = -0.0350342
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_l0dh7")
@@ -47,22 +42,22 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -500.0
-offset_top = 40.0
-offset_right = 500.0
-offset_bottom = 97.0
+offset_left = -584.5
+offset_top = 25.0
+offset_right = 584.5
+offset_bottom = 82.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.95921, 0.878703, 0.706272, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_vq8rg")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 60
 text = "Selecciona tu Suyo de Aventura"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ContenedorCarrusel" type="Node2D" parent="FondoPrincipalUI"]
 unique_name_in_owner = true
-position = Vector2(580, 310)
+position = Vector2(640, 400)
 
 [node name="ChinchaysuyoCard" parent="FondoPrincipalUI/ContenedorCarrusel" instance=ExtResource("1_l344g")]
 anchors_preset = 8
@@ -76,52 +71,55 @@ offset_right = 0.0
 offset_bottom = 0.0
 suyo_nombre = "Chinchaysuyo"
 suyo_descripcion = "Se ubicaba al noroeste del Cusco y se considera que fue la región más importante en términos de agricultura y recursos"
+suyo_imagen_personaje = ExtResource("2_d07xl")
 
 [node name="AntisuyoCard" parent="FondoPrincipalUI/ContenedorCarrusel" instance=ExtResource("1_l344g")]
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 1154.0
+offset_left = 1280.0
 offset_top = 0.0
-offset_right = 1154.0
+offset_right = 1280.0
 offset_bottom = 0.0
 grow_horizontal = 1
 grow_vertical = 1
 suyo_nombre = "Antisuyo"
 suyo_descripcion = "Se destacaban por sus recursos naturales y su conexión con la Amazonía"
+suyo_imagen_personaje = ExtResource("2_d07xl")
 esta_bloqueado = true
 
 [node name="ContisuyoCard" parent="FondoPrincipalUI/ContenedorCarrusel" instance=ExtResource("1_l344g")]
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 2308.0
+offset_left = 2560.0
 offset_top = 0.0
-offset_right = 2308.0
+offset_right = 2560.0
 offset_bottom = 0.0
 grow_horizontal = 1
 grow_vertical = 1
 suyo_nombre = "Contisuyo"
 suyo_descripcion = "Eran conocidos por sus recursos marinos y su acceso al océano"
+suyo_imagen_personaje = ExtResource("2_d07xl")
 esta_bloqueado = true
 
 [node name="CollasuyoCard" parent="FondoPrincipalUI/ContenedorCarrusel" instance=ExtResource("1_l344g")]
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 3462.0
+offset_left = 3840.0
 offset_top = 0.0
-offset_right = 3462.0
+offset_right = 3840.0
 offset_bottom = 0.0
 grow_horizontal = 1
 grow_vertical = 1
 suyo_nombre = "Collasuyo"
 suyo_descripcion = "Descripción pSe destacaban por su riqueza en recursos y por ser una fuente de soldados para el imperio."
+suyo_imagen_personaje = ExtResource("2_d07xl")
 esta_bloqueado = true
 
 [node name="BtnFlechaIzquierda" type="Button" parent="FondoPrincipalUI"]
 unique_name_in_owner = true
-z_index = 2
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -131,7 +129,6 @@ offset_top = -100.0
 offset_right = 135.0
 offset_bottom = 100.0
 grow_vertical = 2
-flat = true
 icon_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="FondoPrincipalUI/BtnFlechaIzquierda"]
@@ -145,7 +142,6 @@ texture = ExtResource("6_ghr1j")
 
 [node name="BtnFlechaDerecha" type="Button" parent="FondoPrincipalUI"]
 unique_name_in_owner = true
-z_index = 2
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -158,7 +154,6 @@ offset_right = -35.0
 offset_bottom = 100.0
 grow_horizontal = 0
 grow_vertical = 2
-flat = true
 
 [node name="TextureRect" type="TextureRect" parent="FondoPrincipalUI/BtnFlechaDerecha"]
 layout_mode = 1
@@ -169,46 +164,8 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("7_d5wye")
 
-[node name="BtnJugar" type="Button" parent="FondoPrincipalUI"]
+[node name="BtnIniciarAventura" type="Button" parent="FondoPrincipalUI"]
 unique_name_in_owner = true
-z_index = 2
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -152.0
-offset_top = -128.0
-offset_right = 148.0
-offset_bottom = -28.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="TextureRect" type="TextureRect" parent="FondoPrincipalUI/BtnJugar"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("7_vq8rg")
-
-[node name="BtnBack" type="Button" parent="FondoPrincipalUI"]
-unique_name_in_owner = true
-z_index = 2
-layout_mode = 1
-offset_left = 20.0
-offset_top = 35.0
-offset_right = 80.0
-offset_bottom = 95.0
-flat = true
-
-[node name="TextureRect" type="TextureRect" parent="FondoPrincipalUI/BtnBack"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("8_ghr1j")
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

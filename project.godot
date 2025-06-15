@@ -21,4 +21,5 @@ buses/default_bus_layout="uid://dx1h8facal7hd"
 
 [display]
 
+window/size/mode=3
 window/stretch/mode="canvas_items"

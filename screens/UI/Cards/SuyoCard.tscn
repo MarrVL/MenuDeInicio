@@ -1,11 +1,10 @@
-[gd_scene load_steps=15 format=4 uid="uid://cbab33barl8wq"]
+[gd_scene load_steps=14 format=4 uid="uid://cbab33barl8wq"]
 
 [ext_resource type="Script" uid="uid://67eo05m810wl" path="res://screens/UI/Cards/SuyoCard.gd" id="1_4rbd3"]
-[ext_resource type="Texture2D" uid="uid://di08tpicxannm" path="res://resources/fondoTargeta.png" id="1_xdh8e"]
 [ext_resource type="FontFile" uid="uid://dtpyte3at8pmh" path="res://resources/Fonts/Pixellari.ttf" id="2_8xcwm"]
-[ext_resource type="Texture2D" uid="uid://bf08ybja2npv4" path="res://resources/FakeImagePlayer.png" id="3_k1dxj"]
-[ext_resource type="FontFile" uid="uid://bgcpujyt1idcd" path="res://screens/UI/Pixellari.ttf" id="4_4rbd3"]
-[ext_resource type="Texture2D" uid="uid://b3g6avro73gak" path="res://resources/lock_pixel.png" id="6_58b5x"]
+[ext_resource type="Texture2D" uid="uid://dxvpm02kffs6r" path="res://resources/Img/fondoTarjeta.png" id="3_4rbd3"]
+[ext_resource type="Texture2D" uid="uid://bf08ybja2npv4" path="res://resources/Img/FakeImagePlayer.png" id="3_k1dxj"]
+[ext_resource type="Texture2D" uid="uid://b3g6avro73gak" path="res://resources/Img/lock_pixel.png" id="6_58b5x"]
 
 [sub_resource type="Image" id="Image_58b5x"]
 data = {
@@ -424,24 +423,24 @@ cache/0/50/1/glyphs/56/texture_idx = 0
 
 [node name="SuyoCard" type="Control"]
 layout_mode = 3
-anchor_right = 0.95
-anchor_bottom = 1.0
+anchor_right = 0.716
+anchor_bottom = 0.614
 offset_top = -2.0
-offset_right = 4.22388
-offset_bottom = 0.319946
+offset_right = 0.167969
+offset_bottom = 0.127991
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4rbd3")
+suyo_imagen_personaje = ExtResource("3_k1dxj")
 
 [node name="FondoTarjeta" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_xdh8e")
+texture = ExtResource("3_4rbd3")
 
 [node name="LblTituloSuyo" type="Label" parent="FondoTarjeta"]
 layout_mode = 1
@@ -449,9 +448,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -208.0
-offset_top = 50.0
+offset_top = 25.0
 offset_right = 208.0
-offset_bottom = 98.0
+offset_bottom = 73.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.886262, 0.886262, 0.886261, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -463,59 +462,39 @@ vertical_alignment = 1
 
 [node name="LblDescripcion" type="Label" parent="FondoTarjeta"]
 layout_mode = 1
-offset_left = 100.0
-offset_top = 180.0
-offset_right = 600.0
-offset_bottom = 480.0
+offset_left = 35.0
+offset_top = 100.0
+offset_right = 515.0
+offset_bottom = 350.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_8xcwm")
-theme_override_font_sizes/font_size = 35
+theme_override_font_sizes/font_size = 25
 text = "Se ubicaba al noroeste del Cusco y se considera que fue la región más importante en términos de agricultura y recursos."
+horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="ImgPersonaje" type="TextureRect" parent="FondoTarjeta"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.659
-anchor_top = 0.205
-anchor_right = 0.929
-anchor_bottom = 0.699
-offset_left = 0.509949
-offset_top = 0.0599976
-offset_right = -0.190063
-offset_bottom = 0.0679626
+anchor_left = 0.66
+anchor_top = 0.26
+anchor_right = 0.939
+anchor_bottom = 0.781
+offset_left = 0.174988
+offset_top = -10.0
+offset_right = -10.0001
+offset_bottom = -0.0499878
 texture = ExtResource("3_k1dxj")
 expand_mode = 1
 
-[node name="BtnJugar" type="Button" parent="FondoTarjeta"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.968
-anchor_right = 0.5
-anchor_bottom = 0.98
-offset_left = -111.0
-offset_top = -90.624
-offset_right = 111.0
-offset_bottom = -13.64
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_fonts/font = ExtResource("4_4rbd3")
-theme_override_font_sizes/font_size = 60
-text = "JUGAR"
-
 [node name="ImgCandado" type="TextureRect" parent="FondoTarjeta"]
 visible = false
+z_index = 1
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -250.0
-offset_top = -250.0
-offset_right = 250.0
-offset_bottom = 250.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("6_58b5x")

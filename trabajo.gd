@@ -12,7 +12,6 @@ func _ready():
 	
 func _on_Empezar_pressed():
 	get_tree().change_scene_to_file("res://screens/PanelSeleccionSuyos.tscn")
-	#get_tree().change_scene_to_file("res://trabajo.tscn")
 	
 func _on_opciones_pressed() -> void:
 	print("Settings pressed")
@@ -25,3 +24,7 @@ func _on_Salir_pressed():
 
 func _on_regresar_opciones_pressed() -> void:
 	_ready()
+
+
+func _on_empezar_pressed() -> void:
+	pass # Replace with function body.

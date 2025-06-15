@@ -13,11 +13,11 @@ extends Control
 @onready var lbl_titulo_suyo: Label = fondo_tarjeta.get_node("LblTituloSuyo")
 @onready var lbl_descripcion: Label = fondo_tarjeta.get_node("LblDescripcion")
 @onready var img_personaje: TextureRect = fondo_tarjeta.get_node("ImgPersonaje")
-@onready var btn_jugar: Button = fondo_tarjeta.get_node("BtnJugar")
+#@onready var btn_jugar: Button = fondo_tarjeta.get_node("BtnJugar")
 @onready var img_candado: TextureRect = fondo_tarjeta.get_node("ImgCandado")
 
 # Señal que emitirá esta tarjeta cuando se presione el botón Jugar
-signal suyo_seleccionado(suyo_nombre: String)
+#signal suyo_seleccionado(suyo_nombre: String)
 
 func _ready():
 	# Asigna los valores de las variables exportadas a los elementos de la UI
@@ -28,12 +28,12 @@ func _ready():
 
 	# Maneja el estado de bloqueo
 	img_candado.visible = esta_bloqueado
-	btn_jugar.disabled = esta_bloqueado
+	#btn_jugar.disabled = esta_bloqueado
 
 	# Conecta la señal del botón JUGAR
-	btn_jugar.pressed.connect(_on_btn_jugar_pressed)
+	#btn_jugar.pressed.connect(_on_btn_jugar_pressed)
 
-func _on_btn_jugar_pressed():
+#func _on_btn_jugar_pressed():
 	# Emite la señal con el nombre del suyo para que el panel principal la capture
-	emit_signal("suyo_seleccionado", suyo_nombre)
-	print("Botón Jugar presionado para: ", suyo_nombre)
+	#emit_signal("suyo_seleccionado", suyo_nombre)
+	#print("Botón Jugar presionado para: ", suyo_nombre)
