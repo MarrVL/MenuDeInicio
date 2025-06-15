@@ -207,6 +207,7 @@ max_value = 1.0
 step = 0.05
 value = 1.0
 script = ExtResource("7_uy8w2")
+audio_bus_name = "Musica"
 
 [node name="pantallaTamaño" type="CheckButton" parent="PanelOpciones"]
 layout_mode = 1
@@ -242,6 +243,17 @@ text = "Opciones
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Empezar" type="Button" parent="."]
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_nwdx3")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_j5fxl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_udqf3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gcf2m")
+text = "Jugar"
 
 [connection signal="pressed" from="ContenedorBotones/Opciones" to="." method="_on_opciones_pressed"]
 [connection signal="pressed" from="PanelOpciones/Regresar" to="." method="_on_regresar_opciones_pressed"]
