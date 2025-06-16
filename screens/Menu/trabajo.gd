@@ -11,7 +11,7 @@ func _ready():
 	panel_opciones.visible = false
 	
 func _on_Empezar_pressed():
-	get_tree().change_scene_to_file("res://screens/PanelSeleccionSuyos.tscn")
+	get_tree().change_scene_to_file("res://screens/PanelSeleccion/PanelSeleccionSuyos.tscn")
 	
 func _on_opciones_pressed() -> void:
 	print("Settings pressed")

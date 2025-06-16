@@ -1,17 +1,17 @@
-[gd_scene load_steps=19 format=3 uid="uid://bhqwgfcg47dg"]
+[gd_scene load_steps=19 format=3 uid="uid://bcr11xakjy16x"]
 
-[ext_resource type="Script" uid="uid://c3lfoke0lv8ja" path="res://trabajo.gd" id="1_u380l"]
-[ext_resource type="Texture2D" uid="uid://bt2vmrebrfuu8" path="res://fondoPixel.png" id="2_0g5gi"]
-[ext_resource type="FontFile" uid="uid://th8eh07oo8mg" path="res://Crang.ttf" id="3_li2tj"]
-[ext_resource type="AudioStream" uid="uid://cuasx2ll4dt3c" path="res://Undertale - Megalovania.mp3" id="4_dny3x"]
-[ext_resource type="Texture2D" uid="uid://v5n07u7d1nre" path="res://nombre del juego.png" id="5_kgwr3"]
-[ext_resource type="Texture2D" uid="uid://mtef0f5pjc6n" path="res://tira.png" id="6_p0qne"]
-[ext_resource type="Script" uid="uid://djevk68i5ys5s" path="res://volumen_slider.gd" id="7_mct3m"]
-[ext_resource type="FontFile" uid="uid://btigat11r1b2x" path="res://resources/Fonts/Pixelcraft - Personal Use.ttf" id="8_yxeci"]
-[ext_resource type="Script" uid="uid://dafjw5qxgwcdf" path="res://pantalla_tamaño.gd" id="9_wic4e"]
+[ext_resource type="Script" uid="uid://c3lfoke0lv8ja" path="res://screens/Menu/trabajo.gd" id="1_ls076"]
+[ext_resource type="Texture2D" uid="uid://bt2vmrebrfuu8" path="res://resources/Img/fondoPixel.png" id="2_crsm4"]
+[ext_resource type="FontFile" uid="uid://th8eh07oo8mg" path="res://resources/Fonts/Crang.ttf" id="3_qvlff"]
+[ext_resource type="AudioStream" uid="uid://cuasx2ll4dt3c" path="res://resources/Audio/Undertale - Megalovania.mp3" id="4_140n1"]
+[ext_resource type="Texture2D" uid="uid://v5n07u7d1nre" path="res://resources/Img/nombre del juego.png" id="5_ovc0h"]
+[ext_resource type="Texture2D" uid="uid://mtef0f5pjc6n" path="res://resources/Img/tira.png" id="6_wadr7"]
+[ext_resource type="Script" uid="uid://djevk68i5ys5s" path="res://screens/Menu/volumen_slider.gd" id="7_ty3vb"]
+[ext_resource type="FontFile" uid="uid://btigat11r1b2x" path="res://resources/Fonts/Pixelcraft - Personal Use.ttf" id="8_2qri3"]
+[ext_resource type="Script" uid="uid://dafjw5qxgwcdf" path="res://screens/Menu/pantalla_tamaño.gd" id="9_yxj12"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m6wq2"]
-texture = ExtResource("2_0g5gi")
+texture = ExtResource("2_crsm4")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5fxl"]
 bg_color = Color(0.134956, 0.0168204, 0.00409019, 1)
@@ -61,12 +61,13 @@ thickness = 8
 
 [node name="Control" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 1.111
+anchor_bottom = 1.111
+offset_right = 0.12793
+offset_bottom = 0.0719604
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_u380l")
+script = ExtResource("1_ls076")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -98,7 +99,7 @@ layout_mode = 2
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_li2tj")
+theme_override_fonts/font = ExtResource("3_qvlff")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxFlat_j5fxl")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_udqf3")
@@ -110,7 +111,7 @@ layout_mode = 2
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_li2tj")
+theme_override_fonts/font = ExtResource("3_qvlff")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxFlat_s37qw")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_nwdx3")
@@ -122,7 +123,7 @@ layout_mode = 2
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_li2tj")
+theme_override_fonts/font = ExtResource("3_qvlff")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxFlat_j5fxl")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_udqf3")
@@ -131,24 +132,24 @@ text = "Salir"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(291, 87)
-stream = ExtResource("4_dny3x")
+stream = ExtResource("4_140n1")
 autoplay = true
 bus = &"Musica"
 
 [node name="NombreDelJuego" type="Sprite2D" parent="."]
 position = Vector2(583, 220)
 scale = Vector2(0.263733, 0.263733)
-texture = ExtResource("5_kgwr3")
+texture = ExtResource("5_ovc0h")
 
 [node name="Tira" type="Sprite2D" parent="."]
-position = Vector2(594, 572)
+position = Vector2(641, 593)
 scale = Vector2(0.322697, 0.242108)
-texture = ExtResource("6_p0qne")
+texture = ExtResource("6_wadr7")
 
 [node name="Tira2" type="Sprite2D" parent="."]
-position = Vector2(599, 70)
+position = Vector2(632, 72)
 scale = Vector2(0.334568, 0.25073)
-texture = ExtResource("6_p0qne")
+texture = ExtResource("6_wadr7")
 
 [node name="PanelOpciones" type="Panel" parent="."]
 layout_mode = 1
@@ -172,21 +173,21 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -126.0
-offset_top = -72.0
-offset_right = 127.0
-offset_bottom = -23.0
+offset_left = -105.0
+offset_top = -75.0
+offset_right = 105.0
+offset_bottom = -18.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_li2tj")
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("3_qvlff")
+theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxFlat_j5fxl")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_udqf3")
 theme_override_styles/normal = SubResource("StyleBoxFlat_gcf2m")
-text = "Regresar"
+text = "Salir"
 
 [node name="VolumenSlider" type="HSlider" parent="PanelOpciones"]
 layout_mode = 1
@@ -206,7 +207,7 @@ theme_override_styles/grabber_area = SubResource("StyleBoxLine_uy8w2")
 max_value = 1.0
 step = 0.05
 value = 1.0
-script = ExtResource("7_mct3m")
+script = ExtResource("7_ty3vb")
 
 [node name="pantallaTamaño" type="CheckButton" parent="PanelOpciones"]
 layout_mode = 1
@@ -221,10 +222,10 @@ offset_right = 206.0
 offset_bottom = 61.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("8_yxeci")
+theme_override_fonts/font = ExtResource("8_2qri3")
 theme_override_font_sizes/font_size = 30
 text = "Pantalla Completa"
-script = ExtResource("9_wic4e")
+script = ExtResource("9_yxj12")
 
 [node name="Nombre" type="Label" parent="PanelOpciones"]
 layout_mode = 1
@@ -236,14 +237,13 @@ offset_right = 279.0
 offset_bottom = 113.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("8_yxeci")
+theme_override_fonts/font = ExtResource("8_2qri3")
 theme_override_font_sizes/font_size = 50
 text = "Opciones
 "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="ContenedorBotones/Empezar" to="." method="_on_Empezar_pressed"]
 [connection signal="pressed" from="ContenedorBotones/Opciones" to="." method="_on_opciones_pressed"]
 [connection signal="pressed" from="PanelOpciones/Regresar" to="." method="_on_regresar_opciones_pressed"]
 [connection signal="value_changed" from="PanelOpciones/VolumenSlider" to="PanelOpciones/VolumenSlider" method="_on_value_changed"]

@@ -115,4 +115,4 @@ func _update_arrow_buttons_visibility():
 func _on_btn_back_pressed():
 	print("Regresando al menú principal...")
 	#deveriamos cambiar la ubicacion del menu dentro de screen algo asi res://screens/MainMenu.tscn
-	get_tree().change_scene_to_file("res://Menú.tscn") # ¡AJUSTA ESTA RUTA!
+	get_tree().change_scene_to_file("res://screens/Menu/Menú.tscn")

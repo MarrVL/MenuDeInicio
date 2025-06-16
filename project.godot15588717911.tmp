@@ -13,7 +13,7 @@ config_version=5
 config/name="MenúInicio"
 run/main_scene="uid://dbl5udhhalefr"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="uid://w2e4wmq5vkxr"
+boot_splash/image="uid://cygql1keu828q"
 
 [audio]
 

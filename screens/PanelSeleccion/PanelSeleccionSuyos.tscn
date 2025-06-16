@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://b2w777ldtbg4s"]
 
 [ext_resource type="PackedScene" uid="uid://cbab33barl8wq" path="res://screens/UI/Cards/SuyoCard.tscn" id="1_l344g"]
-[ext_resource type="Script" uid="uid://bxe4lmrd8peh3" path="res://screens/PanelSeleccionSuyos.gd" id="1_msf4k"]
-[ext_resource type="Texture2D" uid="uid://srlpk7ygpgdc" path="res://resources/Img/fondoPixel.png" id="2_l0dh7"]
+[ext_resource type="Script" uid="uid://bxe4lmrd8peh3" path="res://screens/PanelSeleccion/PanelSeleccionSuyos.gd" id="1_msf4k"]
+[ext_resource type="Texture2D" uid="uid://bt2vmrebrfuu8" path="res://resources/Img/fondoPixel.png" id="2_l0dh7"]
 [ext_resource type="FontFile" uid="uid://btigat11r1b2x" path="res://resources/Fonts/Pixelcraft - Personal Use.ttf" id="3_vq8rg"]
 [ext_resource type="Texture2D" uid="uid://dyacjadwmg0xa" path="res://resources/Img/flechaIzquierda.png" id="6_ghr1j"]
 [ext_resource type="Texture2D" uid="uid://b01s2i3o7n84w" path="res://resources/Img/flechaDerecha.png" id="7_d5wye"]

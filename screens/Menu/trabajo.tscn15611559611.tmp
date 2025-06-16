@@ -1,0 +1,251 @@
+[gd_scene load_steps=19 format=3 uid="uid://dbl5udhhalefr"]
+
+[ext_resource type="Script" uid="uid://c3lfoke0lv8ja" path="res://screens/Menu/trabajo.gd" id="1_dpmxk"]
+[ext_resource type="Texture2D" uid="uid://bt2vmrebrfuu8" path="res://resources/Img/fondoPixel.png" id="2_bci3y"]
+[ext_resource type="FontFile" uid="uid://th8eh07oo8mg" path="res://resources/Fonts/Crang.ttf" id="3_cf7r8"]
+[ext_resource type="AudioStream" uid="uid://cuasx2ll4dt3c" path="res://resources/Audio/Undertale - Megalovania.mp3" id="4_r32ps"]
+[ext_resource type="Texture2D" uid="uid://v5n07u7d1nre" path="res://resources/Img/nombre del juego.png" id="5_7falr"]
+[ext_resource type="Texture2D" uid="uid://mtef0f5pjc6n" path="res://resources/Img/tira.png" id="6_wks4h"]
+[ext_resource type="Script" uid="uid://djevk68i5ys5s" path="res://screens/Menu/volumen_slider.gd" id="7_6gkeb"]
+[ext_resource type="FontFile" uid="uid://btigat11r1b2x" path="res://resources/Fonts/Pixelcraft - Personal Use.ttf" id="8_bjyiw"]
+[ext_resource type="Script" uid="uid://dafjw5qxgwcdf" path="res://screens/Menu/pantalla_tamaño.gd" id="9_onbjb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m6wq2"]
+texture = ExtResource("2_bci3y")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5fxl"]
+bg_color = Color(0.134956, 0.0168204, 0.00409019, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_udqf3"]
+bg_color = Color(0.106193, 0.0113456, 0.00276024, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gcf2m"]
+bg_color = Color(0.447059, 0.0862745, 0.290196, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s37qw"]
+bg_color = Color(0.168263, 0.0247779, 0.00602131, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nwdx3"]
+bg_color = Color(0.106193, 0.0113456, 0.00276024, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bsxud"]
+bg_color = Color(0.0627451, 0.0352941, 0.00392157, 0.878431)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_oo8ag"]
+color = Color(1, 1, 1, 1)
+thickness = 8
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_uy8w2"]
+color = Color(0.268548, 0.0185778, 0.115585, 1)
+thickness = 8
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dpmxk")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_m6wq2")
+
+[node name="ContenedorBotones" type="VBoxContainer" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = 20.0
+offset_right = 151.0
+offset_bottom = 193.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="Empezar" type="Button" parent="ContenedorBotones"]
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cf7r8")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_j5fxl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_udqf3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gcf2m")
+text = "Jugar"
+
+[node name="Opciones" type="Button" parent="ContenedorBotones"]
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cf7r8")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_s37qw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nwdx3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gcf2m")
+text = "Opciones"
+
+[node name="Salir" type="Button" parent="ContenedorBotones"]
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cf7r8")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_j5fxl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_udqf3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gcf2m")
+text = "Salir"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(291, 87)
+stream = ExtResource("4_r32ps")
+autoplay = true
+bus = &"Musica"
+
+[node name="NombreDelJuego" type="Sprite2D" parent="."]
+position = Vector2(583, 220)
+scale = Vector2(0.263733, 0.263733)
+texture = ExtResource("5_7falr")
+
+[node name="Tira" type="Sprite2D" parent="."]
+position = Vector2(594, 572)
+scale = Vector2(0.322697, 0.242108)
+texture = ExtResource("6_wks4h")
+
+[node name="Tira2" type="Sprite2D" parent="."]
+position = Vector2(599, 70)
+scale = Vector2(0.334568, 0.25073)
+texture = ExtResource("6_wks4h")
+
+[node name="PanelOpciones" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.0
+offset_top = -151.0
+offset_right = 248.0
+offset_bottom = 151.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bsxud")
+
+[node name="Regresar" type="Button" parent="PanelOpciones"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -105.0
+offset_top = -75.0
+offset_right = 105.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_cf7r8")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_j5fxl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_udqf3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gcf2m")
+text = "Salir"
+
+[node name="VolumenSlider" type="HSlider" parent="PanelOpciones"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -197.0
+offset_top = -51.0
+offset_right = 214.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxLine_oo8ag")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_uy8w2")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("7_6gkeb")
+audio_bus_name = "Musica"
+
+[node name="pantallaTamaño" type="CheckButton" parent="PanelOpciones"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -197.0
+offset_top = 12.0
+offset_right = 206.0
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("8_bjyiw")
+theme_override_font_sizes/font_size = 30
+text = "Pantalla Completa"
+script = ExtResource("9_onbjb")
+
+[node name="Nombre" type="Label" parent="PanelOpciones"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -282.0
+offset_right = 279.0
+offset_bottom = 113.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("8_bjyiw")
+theme_override_font_sizes/font_size = 50
+text = "Opciones
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="ContenedorBotones/Empezar" to="." method="_on_Empezar_pressed"]
+[connection signal="pressed" from="ContenedorBotones/Opciones" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="PanelOpciones/Regresar" to="." method="_on_regresar_opciones_pressed"]
+[connection signal="value_changed" from="PanelOpciones/VolumenSlider" to="PanelOpciones/VolumenSlider" method="_on_value_changed"]
+[connection signal="toggled" from="PanelOpciones/pantallaTamaño" to="PanelOpciones/pantallaTamaño" method="_on_toggled"]

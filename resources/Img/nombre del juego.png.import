@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mtef0f5pjc6n"
-path="res://.godot/imported/tira.png-b474123b2886f16d7ea7856b38630192.ctex"
+uid="uid://v5n07u7d1nre"
+path="res://.godot/imported/nombre del juego.png-695bf99e23802c5871ae38dce964c217.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tira.png"
-dest_files=["res://.godot/imported/tira.png-b474123b2886f16d7ea7856b38630192.ctex"]
+source_file="res://resources/Img/nombre del juego.png"
+dest_files=["res://.godot/imported/nombre del juego.png-695bf99e23802c5871ae38dce964c217.ctex"]
 
 [params]
 
